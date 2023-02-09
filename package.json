@@ -4,7 +4,9 @@
   "description": "Bikin di sini gais!!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "down": "npx sequelize db:migrate:undo:all",
+    "up": "npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "repository": {
     "type": "git",

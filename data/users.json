@@ -1,22 +1,19 @@
 [
     {
         "userName": "test",
-        "role": "buyer",
-        "address": "Indonesia",
+        "role": "student",
         "email": "iniemail1@hacktiv8.com",
         "password": "1n14d4l4hp4ssw0rd11"
     },
     {
         "userName": "test2",
-        "role": "seller",
-        "address": "Miami",
+        "role": "student",
         "email": "iniemail2@hacktiv8.com",
         "password": "1n14d4l4hp4ssw0rd22"
     },
     {
         "userName": "test3",
-        "role": "admin",
-        "address": "France",
+        "role": "teacher",
         "email": "iniemail3@hacktiv8.com",
         "password": "1n14d4l4hp4ssw0rd33"
     }
