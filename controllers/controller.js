@@ -1,4 +1,4 @@
-const { Course } = require('../models/index')
+const { Course, Category } = require('../models/index')
 
 class Controller {
     static home(req, res) {
