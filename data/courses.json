@@ -4,27 +4,32 @@
         "description": "What you'll learn\r\n-- Build 16 web development projects for your portfolio, ready to apply for junior developer jobs.\r\n-- Master backend development with Node\r\n-- Master frontend development with React",
         "duration": 2900,
         "CategoryId": 1,
-        "rating": 4.7
+        "rating": 4.7,
+        "price": 1000000
+
     },
     {
         "name": "Understanding TypeScript",
         "description": "What you'll learn\r\n-- Use TypeScript and its Features like Types, ES6 Support, Classes, Modules, Interfaces and much more in any of their Projects\r\n-- Learn how to combine TypeScript with ReactJS or NodeJS / Express\r\n-- Learn TypeScript both in theory as well as applied to real use-cases and projects",
         "duration": 1900,
         "CategoryId": 1,
-        "rating": 4.7
+        "rating": 4.7,
+        "price": 800000
     },
     {
         "name": "Learn Python: The Complete Python Programming Course",
         "description": "What you'll learn\r\n-- Create their own Python Programs\r\n-- Parse the Web and Create their own Games\r\n-- Become an experienced Python Programmer",
         "duration": 2800,
         "CategoryId": 2,
-        "rating": 4.3
+        "rating": 4.3,
+        "price": 500000
     },
     {
         "name": "Artificial Intelligence A-Z™: Learn How To Build An AI",
         "description": "What you'll learn\r\n-- Build an AI\r\n-- Understand the theory behind Artificial Intelligence\r\n-- Solve Real World Problems with AI\r\n-- Make an AI to beat games",
         "duration": 3100,
         "CategoryId": 2,
-        "rating": 4.4
+        "rating": 4.4,
+        "price": 750000
     }
 ]
