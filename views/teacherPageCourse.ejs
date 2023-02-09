@@ -14,16 +14,7 @@
 </head>
 
 <body>
-    <form action="/courses" method="get">
-        <select name="filter">
-            <option disabled selected>Select one to filter</option>
-            <% filterValues.forEach(el => { %>
-             <option value="<%= el.name %>"><%= el.name %></option>
-            <% }) %>
-        </select>
-        <button>Filter</button>
-    </form>
-    <a href="/courses">Back</a>
+    <a href="/courses/teacher/add" class="btn btn-success">Add</a>
     <div style="display: flex; justify-content: space-around;">
         <% data.forEach(el=> { %>
             <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;"> 
@@ -43,7 +34,8 @@
                     <p class="card-text">
                         <%= el.description %>
                     </p>
-                    <a href="#" class="btn btn-primary">Add Cart</a>
+                    <a href="/courses/teacher/edit/<%= el.id %>" class="btn btn-outline-success">Edit</a>
+                    <a href="#" class="btn btn-outline-danger">Delete</a>
                 </div>
             </div>
             <% }) %>

@@ -44,5 +44,11 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Course',
   });
+
+  Course.beforeCreate((course, options) => {
+    if (course.name) {
+      course.rating = 0
+    }
+  });
   return Course;
 };
