@@ -34,12 +34,67 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   Course.init({
-    name: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    duration: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: "name can't by empty"
+        },
+        notNull:{
+          msg: "name can't by empty"
+        }
+      }
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: "description can't by empty"
+        },
+        notNull:{
+          msg: "description can't by empty"
+        }
+      }
+    },
+    duration: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: "duration can't by empty"
+        },
+        notNull:{
+          msg: "duration can't by empty"
+        }
+      }
+    },
     rating: DataTypes.INTEGER,
-    price: DataTypes.INTEGER,
-    CategoryId: DataTypes.INTEGER
+    price:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: "price can't by empty"
+        },
+        notNull:{
+          msg: "price can't by empty"
+        }
+      }
+    },
+    CategoryId:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: "Category can't by empty"
+        },
+        notNull:{
+          msg: "Category can't by empty"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Course',

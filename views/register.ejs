@@ -15,6 +15,13 @@
 
 <body>
     <h1 class="h1">Create Account</h1>
+    <% if (errors) { %>
+        <% errors.split(',').forEach(el => { %>
+            <p style="color: red;">
+                <%= el %>
+            </p>
+        <% }) %>
+    <% } %>
     <form action="/login/register" method="post" style="display: flex; flex-direction: column; width: 40%;">
     <label for="name">Name</label>
     <input type="text" id="name" name="userName">

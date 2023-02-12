@@ -15,6 +15,13 @@
 
 <body>
     <h1 class="h1">Login Form</h1>
+    <% if (errors) { %>
+        <% errors.split(',').forEach(el => { %>
+            <p style="color: red;">
+                <%= el %>
+            </p>
+        <% }) %>
+    <% } %>
     <form class="row g-3" style="display: flex; flex-direction: column; width: 40%;" action="/login/form" method="post">
         <div class="col-auto">
             <label for="name" class="visually-hidden">User Name</label>
@@ -24,17 +31,9 @@
             <label for="password" class="visually-hidden">Password</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="Password">
         </div>
-        <label for="role">Role</label>
-        <select name="role" class="form-select" aria-label="Disabled select example" id="role">
-            <option disabled selected>-- Select Role --</option>
-            <option value="Student">Student</option>
-            <option value="Teacher">Teacher</option>
-        </select>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Login</button>
+            <button type="submit" class="btn btn-success">Login</button>
         </div>
     </form>
 </body>
 
 </html>
-

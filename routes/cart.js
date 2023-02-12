@@ -1,9 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const course = require('./course')
-
-
-router.use(course)
+const Controller = require('../controllers/controller')
 
 
 module.exports = router

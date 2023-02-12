@@ -14,31 +14,44 @@
 </head>
 
 <body>
-    <a href="/courses/teacher/add" class="btn btn-success">Add</a>
-    <div style="display: flex; justify-content: space-around;">
-        <% data.forEach(el=> { %>
-            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;"> 
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <%= el.name %>
-                    </h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
-                        <%= timeFormating(el.duration) %>
-                    </h6>
-                    <h6 class="card-subtitle mb-2 text-muted">
-                        <%= el.rating %>
-                    </h6>
-                    <h6 class="card-subtitle mb-2 text-muted">
-                        <%= rupiah(el.price) %>
-                    </h6>
-                    <p class="card-text">
-                        <%= el.description %>
-                    </p>
-                    <a href="/courses/teacher/edit/<%= el.id %>" class="btn btn-outline-success">Edit</a>
-                    <a href="#" class="btn btn-outline-danger">Delete</a>
-                </div>
+<a href="/logout">Logout Guiiis!</a>
+    <% if (name) { %>
+        <p style="color: red;">
+            <%= `Course with name ${name} has been deleted` %>
+        </p>
+        <% } %>
+            <form class="input-group mb-3" method="get" action="/courses/teacher">
+                <input name="search" type="text" class="form-control" placeholder="Search your course"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary">Button</button>
+            </form>
+            <a href="/courses/teacher/add" class="btn btn-success">Add</a>
+
+            <div style="display: flex; justify-content: space-around;">
+                <% data.forEach(el=> { %>
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= el.name %>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <%= timeFormating(el.duration) %>
+                            </h6>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <%= el.rating %>
+                            </h6>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <%= rupiah(el.price) %>
+                            </h6>
+                            <p class="card-text">
+                                <%= el.description %>
+                            </p>
+                            <a href="/courses/teacher/edit/<%= el.id %>" class="btn btn-outline-success">Edit</a>
+                            <a href="/courses/teacher/delete/<%= el.id %>" class="btn btn-outline-danger">Delete</a>
+                        </div>
+                    </div>
+                    <% }) %>
             </div>
-            <% }) %>
-    </div>
 </body>
+
 </html>

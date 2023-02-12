@@ -12,8 +12,15 @@
         crossorigin="anonymous"></script>
     <title>Add Course</title>
 </head>
-
 <body>
+    <% if (errors) { %>
+        <% errors.split(',').forEach(el => { %>
+            <p style="color: red;">
+                <%= el %>
+            </p>
+        <% }) %>
+    <% } %>
+<a href="/logout">Logout Guiiis!</a>
     <form method="post" action="/courses/teacher/add">
         <fieldset style="width: 40%; margin: 50px auto;">
             <legend>Add Course</legend>

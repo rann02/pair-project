@@ -12,6 +12,9 @@ module.exports = {
       quantity: {
         type: Sequelize.STRING
       },
+      nameCourse: {
+        type: Sequelize.STRING
+      },
       totalPrice: {
         type: Sequelize.INTEGER
       },
